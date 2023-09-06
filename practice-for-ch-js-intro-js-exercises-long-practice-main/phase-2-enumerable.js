@@ -39,4 +39,4 @@ Array.prototype.myReduce = function(callback, initialValue) {
     return accumulator;
 }
 
-console.log([-1, 0, 2, -2, 1].myReduce(myReduceCallback, 5));
+// console.log([-1, 0, 2, -2, 1].myReduce(myReduceCallback, 5));
