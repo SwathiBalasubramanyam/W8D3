@@ -31,7 +31,7 @@ Array.prototype.twoSum = function() {
 
 let arr2 = [-1, 0, 2, -2, 1];
 
-console.log(arr2.twoSum());
+// console.log(arr2.twoSum());
 
 Array.prototype.transpose = function() {
     let resArr = [];
