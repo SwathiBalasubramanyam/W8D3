@@ -22,9 +22,9 @@ function exponenet(base, exp){
     if (exp == 0) {
         return 1;
     }
-    return base * exponenet(base, exp-1)
+    return base * exponenet(base, exp-1);
 }
-// console.log(exponenet(3, 3))
+// console.log(exponenet(3, 3));
 
 
 function exponenet2(base, exp){
@@ -33,16 +33,35 @@ function exponenet2(base, exp){
     } else if (exp == 1) {
         return base;
     } else if (exp % 2 == 0){
-        return exponenet2(base, exp/2) ** 2
+        return exponenet2(base, exp/2) ** 2;
     } else {
-        return base * (exponenet2(base, (exp - 1) / 2) ** 2)
+        return base * (exponenet2(base, (exp - 1) / 2) ** 2);
     }
 }
 
-// console.log(exponenet2(3, 3))
+// console.log(exponenet2(3, 3));
 
 function fibonacci(n) {
+    if (n == 1) {
+        return [0];
+    } else if (n == 2) {
+        return [0,1];
+    }
+    let fib = fibonacci(n - 1);
+    let sum = fib[fib.length-1] + fib[fib.length-2];
 
+    return fib.concat(sum)
 }
 
-fibonacci(5)
+console.log(fibonacci(10));
+
+function deepDup(arr) {
+    let resArr = [];
+    arr.forEach((el=> {
+        if (el instanceof Array) {
+            // base case if el is an array
+        }
+    }));
+}
+
+// [2,3,4,6,[5,7,9], [3]]
