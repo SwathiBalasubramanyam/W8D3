@@ -50,7 +50,7 @@ function fibonacci(n) {
     let fib = fibonacci(n - 1);
     let sum = fib[fib.length-1] + fib[fib.length-2];
 
-    return fib.concat(sum)
+    return fib.concat(sum);
 }
 
 console.log(fibonacci(10));
@@ -59,9 +59,13 @@ function deepDup(arr) {
     let resArr = [];
     arr.forEach((el=> {
         if (el instanceof Array) {
-            // base case if el is an array
+            resArr.push(deepDup(el));
+        } else {
+            resArr.push(el);
         }
     }));
+    return resArr;
 }
 
-// [2,3,4,6,[5,7,9], [3]]
+console.log(deepDup([1,2,[3,4]]));
+
